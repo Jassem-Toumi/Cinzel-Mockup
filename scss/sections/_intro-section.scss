@@ -1,0 +1,63 @@
+@use "../custom"as *;
+
+
+.intro-section{
+
+  justify-content: center;
+  // LARGE SCREENS
+
+    margin: 3rem 0;
+    padding: 8rem;
+
+  // MEDIUM SCREENS
+  @include media-breakpoint-down(md) {
+    margin: 3rem 0;
+    padding: 5rem;
+  }
+  // SMALL SCREENS
+  @include media-breakpoint-down(sm) {
+    padding: 5rem 1rem;
+  }
+
+  .container{
+    width: 100%;
+    // SMALL SCREENS 
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+    }
+    .row{
+      padding: 0;
+      margin:0;
+      .intro-column{
+          justify-content: center;
+          text-align: center;
+          padding: 0 5rem;
+          // MEDIUM SCREENS
+          @include media-breakpoint-down(lg) {
+            padding: 0;
+          }
+          // SMALL SCREENS
+          @include media-breakpoint-down(sm) {
+            padding: 0;
+            margin: 0;
+          }
+          h1 {
+            padding: 1rem 0;
+            margin: 0;
+            background-color: rgba($gray-900, 0.8);
+            color: $white;
+
+            // SMALL & MEDIUM SCREENS
+            @include media-breakpoint-down(md) {
+              font-size: 1.5rem;
+            }
+            // SMALL SCREENS 
+            @include media-breakpoint-down(sm){
+              font-size: 1rem;
+            }
+          }
+
+      }
+    }
+  }
+}

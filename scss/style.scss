@@ -1,0 +1,15 @@
+@use "custom";
+
+//Import The components
+
+
+@use "components/typography";
+
+//Import Sections
+
+@use "sections/navbar";
+@use "sections/intro-section";
+@use "sections/featured-artwork";
+@use "sections/footer";
+@use "sections/about";
+@use "sections/contact";

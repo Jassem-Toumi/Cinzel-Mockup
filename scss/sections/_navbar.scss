@@ -1,0 +1,59 @@
+@use "../custom" as *;
+
+
+.menu {
+background-color: white;
+padding: 2rem 0;
+.container{
+
+  .navbar-brand{
+   font-size: 2rem;
+   font-weight: bold;
+  //  @include media-breakpoint-up(lg){
+  //    margin-right: 2rem;
+  //  }
+  }
+#navbarNavAltMarkup{
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+}
+  .row{
+    width: 100%;
+    margin: 0;
+    // SMALL & MEDIUM SCREENS
+    @include media-breakpoint-down(lg) {
+      margin-top: 1.5rem;
+      text-align: center;
+      justify-content: center;
+    }
+    a{
+  
+      font-size: 1.1rem;
+      font-family: ci;
+      padding: 0 1rem;
+      margin: 0;
+      display: inline-block;
+      color: $black;
+      cursor: pointer;
+    }
+  }
+  .icons{
+justify-content: center;
+text-align:end ;
+// SMALL & MEDIUM SCREENS
+@include media-breakpoint-down(lg){
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 0;
+}
+    a{
+      i{
+    font-size: 1.5rem;
+    color: $black;
+      }
+    }
+  }
+  
+}
+}

@@ -1,0 +1,135 @@
+@use "../custom" as *;
+
+
+body{
+  font-family: 'Cinzel',
+  serif;
+
+  // Navigation for JS 
+  
+  [data-tab-content] {
+    display: none;
+  }
+  
+  .active[data-tab-content] {
+    display: block;
+  }
+
+  .active-underline{
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .active-underline::after{
+    content: "";
+    width: 4rem;
+    height: 0.1rem;
+    display: block;
+    background-color: $primary;
+  }
+
+}
+
+
+
+
+
+// UNDERLINE
+.underline{
+
+text-align: start;
+margin-top: 1rem;
+// small screens
+@include media-breakpoint-down(md){
+  text-align: center !important;
+}
+}
+
+.underline::before {
+  content: "";
+  width: 15rem;
+  height: 0.1rem;
+  display: block;
+  margin: 0;
+  background-color: $primary;
+  // small screens
+  @include media-breakpoint-down(md) {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center !important;
+    margin: 0;
+  }
+}
+
+// GRAY BUTTON 
+
+.css-button-retro--sand {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: 1px solid #000;
+  color: #000;
+  background: transparent;
+}
+
+.css-button-retro--sand:hover:after {
+  top: 0;
+  left: 0;
+}
+
+.css-button-retro--sand:after {
+  content: "";
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 5px;
+  left: 5px;
+  transition: 0.2s;
+  background-color: #ced4da;
+
+}
+
+// YELLOW BUTTON
+
+.css-button-retro--sand-yellow {
+  min-width: 130px;
+  height: 40px;
+  color: $black;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: 1px solid #000;
+  color: #000;
+  background: transparent;
+}
+
+.css-button-retro--sand-yellow:hover:after {
+  top: 0;
+  left: 0;
+}
+
+.css-button-retro--sand-yellow:after {
+  content: "";
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 5px;
+  left: 5px;
+  transition: 0.2s;
+  background-color: #FFD700;
+
+}
+
